@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,12 +13,38 @@ namespace WebApplication1.Controllers
     [ApiController]
     public class CuentasController : ControllerBase
     {
+
+
+        private readonly AplicationDbContext _context;
+
+        public CuentasController(AplicationDbContext context)
+        {
+            _context = context;
+        }
         // GET: api/<CuentasController>
         [HttpGet]
-        public IEnumerable<string> Get()
+
+
+        public async Task<ActionResult> Get()
         {
-            return new string[] { "value1", "value2" };
+
+
+
+            try
+            {
+                var listCuentas = await _context.cuenta.ToListAsync();
+
+                return Ok(listCuentas);
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
+
+
         }
+        
 
         // GET api/<CuentasController>/5
         [HttpGet("{id}")]

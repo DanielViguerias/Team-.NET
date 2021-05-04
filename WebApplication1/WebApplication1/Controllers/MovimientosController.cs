@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +13,33 @@ namespace WebApplication1.Controllers
     [ApiController]
     public class MovimientosController : ControllerBase
     {
+
+        private readonly AplicationDbContext _context;
+
+        public MovimientosController(AplicationDbContext context)
+        {
+            _context = context;
+        }
         // GET: api/<MovimientosController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<ActionResult> Get()
         {
-            return new string[] { "value1", "value2" };
+
+
+
+            try
+            {
+                var listMovimientos = await _context.movimiento.ToListAsync();
+
+                return Ok(listMovimientos);
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
+
+
         }
 
         // GET api/<MovimientosController>/5
