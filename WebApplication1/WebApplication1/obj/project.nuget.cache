@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kXZvRpKLoyqUdGKn8ldVQZtwqoG4GctclGfNPC/o2fw4urYjaRZ/8xezQkFw9EneUsmM7rFj++bWT9a3v8tzrg==",
+  "dgSpecHash": "N3iosakbPFf5FNohpZSm4tNFvfEw2qTd+5yyqes/Z2Tx4F2rL++2E48jmiRNmK2b9X/Eud5Vv8RJ700fJpJARw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\german\\Desktop\\Nueva carpeta\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+  "projectFilePath": "C:\\Users\\german\\Desktop\\Nueva carpeta\\Team-.NET\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\german\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\german\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
