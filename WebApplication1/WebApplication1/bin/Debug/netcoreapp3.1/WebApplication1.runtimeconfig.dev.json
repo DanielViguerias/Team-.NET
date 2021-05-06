@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\german\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\german\\.nuget\\packages"
+      "C:\\Users\\Blazt\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Blazt\\.nuget\\packages"
     ]
   }
 }
